@@ -50,6 +50,7 @@
     header {
         position: fixed;
         width: 100%;
+        background-image: linear-gradient(to bottom, rgb(2 2 26), rgba(255,0,0,0));
     }
 
     img.logo {
@@ -115,8 +116,9 @@
         document.querySelector('.flyout')?.classList.add("hidden");
     }
 
-    document.querySelector('.close')?.addEventListener('click', (e: any) => {
-        closeNav();
+    let links = document.querySelectorAll(".flyout a");
+    links.forEach(link => {
+        link.addEventListener('click', () => closeNav());
     });
     document.querySelector('.flyout')?.addEventListener('click', (e: any) => {
         if(!e.target.closest('.flyout-content')) {

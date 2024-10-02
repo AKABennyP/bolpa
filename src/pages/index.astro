@@ -6,6 +6,8 @@ import FeaturedService from '../components/FeaturedService.astro';
 import Misson from '../components/Misson.astro';
 import Staff from '../components/Staff.astro';
 import Believe from '../components/Believe.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -20,25 +22,35 @@ import Believe from '../components/Believe.astro';
 		<div class="bg">
 			<div class="buffer"></div>
 		</div>
-		<div class="bg2">
+		<div id="misson" class="bg2">
+		</div>
+		<div class="bg">
 			<div class="container">
 				<Misson />
 			</div>
-		</div>
-		<div class="bg">
 			<div class="buffer"></div>
+		</div>
+		<div class="container">
+			<Staff />
 		</div>
 		<div class="bg3">
+		</div>
+		<div class="bg">
+			<div class="buffer"></div>
 			<div class="container">
-				<Staff />
+				<Believe />
 			</div>
+		</div>
+		<div class="bg4">
 		</div>
 		<div class="bg">
 			<div class="buffer"></div>
 		</div>
-		<div class="bg4">
+		<Contact/>
+		<div class="bg">
+			<div class="buffer"></div>
 			<div class="container">
-				<Believe />
+				<Footer/>
 			</div>
 		</div>
 	</main>
@@ -48,7 +60,6 @@ import Believe from '../components/Believe.astro';
 <style>
 	.bg {
 		display: flex;
-		min-height: 100vh;
 		flex-direction: column;
 		background-attachment: fixed;
 		background-image: url(/StainedGlass.jpeg);
@@ -81,7 +92,7 @@ import Believe from '../components/Believe.astro';
 		flex-direction: column;
 		flex-wrap: wrap;
 		background-image: url(/womanPraying.jpg);
-		background-position: 45% -200px;
+		background-position: center;
 		background-size: cover;
 		gap: 1.6em;
 		padding-top: 600px;
@@ -94,10 +105,10 @@ import Believe from '../components/Believe.astro';
 		flex-direction: column;
 		flex-wrap: wrap;
 		background-image: url(/pastorStainedGlass.jpeg);
-		background-position: 45% 440px;
+		background-position: center;
 		background-size: cover;
 		gap: 1.6em;
-		padding-bottom: 600px;
+    	padding-bottom: 600px;
 	}
 
 	.bg4 {
@@ -107,7 +118,7 @@ import Believe from '../components/Believe.astro';
 		flex-direction: column;
 		flex-wrap: wrap;
 		background-image: url(/bibleBg.jpg);
-		background-position: 45% 440px;
+		background-position: center;
 		background-size: cover;
 		gap: 1.6em;
 		padding-bottom: 600px;
