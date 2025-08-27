@@ -1,31 +1,82 @@
-<section class="relative isolate overflow-hidden bg-blue-950 text-white">
-    <a href="https://www.facebook.com/100064568626505/videos/421629331037540" target="_blank">
-        <div class="mx-auto max-w-2xl lg:max-w-4xl">
-            <figure>
-                <img class="mx-auto h-40 w-40 mb-6 rounded-full" src="/pastorNichols.jpeg" alt="">
-                <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                    <p class="text-3xl">"God so loved"</p>
-                </blockquote>
-                <figcaption class="mt-3">
-                <div class="mt-4 flex items-center justify-center space-x-3 text-base">
-                    <div class="font-semibold text-white">M. A. Nichols</div>
-                    <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-100">
-                    <circle cx="1" cy="1" r="1" />
-                    </svg>
-                    <div class="text-gray-100">Pastor</div>
-                </div>
-                </figcaption>
-            </figure>
+<section class="relative isolate overflow-hidden bg-blue-950 text-white flex">
+    <a class="featured-service flex justify-center items-center" href="https://www.facebook.com/BreathOfLifeTX/videos/?ref=page_internal" target="_blank">
+        <!--<figure>
+            <img class="mx-auto h-40 w-40 mb-6 rounded-full" src="/pastorNichols.jpeg" alt="">
+            <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                <p class="text-3xl">"God so loved"</p>
+            </blockquote> 
+            <figcaption class="mt-3">
+            <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                <div class="font-semibold text-white">M. A. Nichols</div>
+                <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-100">
+                <circle cx="1" cy="1" r="1" />
+                </svg>
+                <div class="text-gray-100">Pastor</div>
             </div>
+            </figcaption>
+        </figure>-->
+
+        <h2>Click here to watch our latest service!</h2>
+        <div class="play-button mx-2"></div>
     </a>
+    <div class="w-[414px] mx-auto">
+        <h3 class="bg-white text-black col-12 text-right pr-2 text-2xl">THE <b>FEED</b></h3>
+        <div id="wsb-element-75ba640e-6976-4982-8e8e-77c0febba329" class="wsb-element-facebook" data-type="element"> <div id="fb-container-75ba640e-6976-4982-8e8e-77c0febba329" class="wsb-social-facebook "><div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/153422276457" data-width="404" data-height="550" data-show-facepile="true" data-show-posts="true" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=&amp;container_width=404&amp;height=550&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2F153422276457&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=true&amp;small_header=true&amp;width=404"><span style="vertical-align: bottom; width: 404px; height: 550px;"><iframe name="f3c420e6a07639283" width="100%" height="550px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v9.0/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df0741d3af02e4155b%26domain%3Dwww.bolpa.com%26is_canvas%3Dfalse%26origin%3Dhttp%253A%252F%252Fwww.bolpa.com%252Fff3172da31596869b%26relation%3Dparent.parent&amp;container_width=404&amp;height=550&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2F153422276457&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=true&amp;small_header=true&amp;width=404" style="border: none; visibility: visible; width: 404px; height: 550px;" class=""></iframe></span></div></div><script> require(["jquery", "designer/util/facebookSDKHelper"], function ($, fbSDK) { fbSDK.setApiGraphVersion("v9.0"); fbSDK.setLocale("en", "US"); fbSDK.likeBoxGenerator( $("#fb-container-75ba640e-6976-4982-8e8e-77c0febba329"), {"class" : "fb-page", "data-href" : "https://www.facebook.com/153422276457", "data-width" : "404", "data-height" : "550", "data-show-facepile" : "true", "data-show-posts" : "true", "data-small-header" : "true", "data-adapt-container-width" : "true", "data-hide-cover" : "false"} ); }); </script></div>
+    </div>
 </section>
 
 <style>
     section {
-        display: none;
+        display: grid;
         width: 100vw;
         padding: 60px;
         margin-top: 100px;
         background: linear-gradient(to bottom right, #00032e, #3fa6bc);
+        grid-template-columns: 1fr 460px;
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    a.featured-service {
+        @media (max-width: 900px) {
+            margin-bottom: 60px;
+        }
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: bold;
+        width: 180px;
+        text-align: left;
+        line-height: 33px;
+    }
+
+    div.wsb-element-facebook {
+        border: 5px solid white;
+        width: 414px;
+    }
+
+    .play-button {
+        width: 80px;
+        height: 80px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        position: relative;
+    }
+
+    .play-button::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 28px solid #fff;
+        border-top: 18px solid transparent;
+        border-bottom: 18px solid transparent;
     }
 </style>
