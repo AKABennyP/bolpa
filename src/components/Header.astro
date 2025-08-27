@@ -101,23 +101,24 @@
 </style>
 
 <script>
-    console.log('Welcome, browser console!');
-    document.querySelector('#hamburger')?.addEventListener('click', (e: any) => {
-        document.querySelector('.flyout')?.classList.remove("hidden");
-    });
+    if (typeof window !== 'undefined') {
+        document.querySelector('#hamburger')?.addEventListener('click', (e: any) => {
+            document.querySelector('.flyout')?.classList.remove("hidden");
+        });
 
-    function closeNav() {
-        document.querySelector('.flyout')?.classList.add("hidden");
-    }
-
-    document.querySelector('.close')?.addEventListener('click', () => closeNav());
-    let links = document.querySelectorAll(".flyout a");
-    links.forEach(link => {
-        link.addEventListener('click', () => closeNav());
-    });
-    document.querySelector('.flyout')?.addEventListener('click', (e: any) => {
-        if(!e.target.closest('.flyout-content')) {
-            closeNav();
+        function closeNav() {
+            document.querySelector('.flyout')?.classList.add("hidden");
         }
+
+        document.querySelector('.close')?.addEventListener('click', () => closeNav());
+        let links = document.querySelectorAll(".flyout a");
+        links.forEach(link => {
+            link.addEventListener('click', () => closeNav());
+        });
+        document.querySelector('.flyout')?.addEventListener('click', (e: any) => {
+            if(!e.target.closest('.flyout-content')) {
+                closeNav();
+            }
     });
+    }
 </script>
