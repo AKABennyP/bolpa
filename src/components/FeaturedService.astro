@@ -1,25 +1,9 @@
 <section class="relative isolate overflow-hidden bg-blue-950 text-white flex">
-    <a class="featured-service flex justify-center items-center" href="https://www.facebook.com/BreathOfLifeTX/videos/?ref=page_internal" target="_blank">
-        <!--<figure>
-            <img class="mx-auto h-40 w-40 mb-6 rounded-full" src="/pastorNichols.jpeg" alt="">
-            <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                <p class="text-3xl">"God so loved"</p>
-            </blockquote> 
-            <figcaption class="mt-3">
-            <div class="mt-4 flex items-center justify-center space-x-3 text-base">
-                <div class="font-semibold text-white">M. A. Nichols</div>
-                <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-100">
-                <circle cx="1" cy="1" r="1" />
-                </svg>
-                <div class="text-gray-100">Pastor</div>
-            </div>
-            </figcaption>
-        </figure>-->
-
+    <a class="featured-service flex" href="https://www.facebook.com/BreathOfLifeTX/videos/?ref=page_internal" target="_blank">
         <h2>Click here to watch our latest service!</h2>
         <div class="play-button mx-2"></div>
     </a>
-    <div class="w-[414px] mx-auto">
+    <div class="feed w-[414px] mx-auto">
         <h3 class="bg-white text-black col-12 text-right pr-2 text-2xl">THE <b>FEED</b></h3>
         <div id="wsb-element-75ba640e-6976-4982-8e8e-77c0febba329" class="wsb-element-facebook" data-type="element">
             <div id="fb-container-75ba640e-6976-4982-8e8e-77c0febba329" class="wsb-social-facebook ">
@@ -40,18 +24,35 @@
         padding: 60px;
         margin-top: 100px;
         background: linear-gradient(to bottom right, #00032e, #3fa6bc);
-        grid-template-columns: 1fr 460px;
+        grid-template-columns: 1fr 1fr;
 
         @media (max-width: 900px) {
             grid-template-columns: 1fr;
         }
+
+        @media (max-width: 450px) {
+            padding: 60px 15px;
+        }
     }
 
     a.featured-service {
+        justify-content: flex-end;
+        margin: 0 50px 0;
+
         @media (max-width: 900px) {
+            justify-content: center;
             margin-bottom: 60px;
         }
     }
+
+    div.feed {
+        margin: 0 50px 0;
+
+        @media (max-width: 900px) {
+            margin: 0 auto;
+        }
+    }
+
 
     h2 {
         font-size: 40px;
